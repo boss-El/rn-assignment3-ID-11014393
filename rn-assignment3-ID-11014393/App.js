@@ -3,12 +3,14 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, SafeAreaView } from 'react-native';
 import Nav from './Nav';
+import SearchArea from './SearchArea';
 
 export default function App() {
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
         <Nav />
+        <SearchArea />
       </View>
       <StatusBar style="auto" />
     </SafeAreaView>
