@@ -5,6 +5,7 @@ import { StyleSheet, View, SafeAreaView } from 'react-native';
 import Nav from './Nav';
 import SearchArea from './SearchArea';
 import Categories from './Categories';
+import CategoriesItems from './CategoriesItems';
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <Nav />
         <SearchArea />
         <Categories />
+        <CategoriesItems /> {/* Added CategoriesItems component */}
       </View>
       <StatusBar style="auto" />
     </SafeAreaView>
