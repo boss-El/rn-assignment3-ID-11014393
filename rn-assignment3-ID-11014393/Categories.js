@@ -12,11 +12,12 @@ const Categories = () => {
 
 const styles = StyleSheet.create({
   categoriesContainer: {
-    position: 'absolute',
-    top: 180, // Adjusted top property to reduce the margin at the top
+    // position: 'relative',
+    top: 50, // Adjusted top property to reduce the margin at the top
     left: 20,
   },
   categoriesText: {
+
     width: 96,
     height: 24,
     fontFamily: 'Lato',

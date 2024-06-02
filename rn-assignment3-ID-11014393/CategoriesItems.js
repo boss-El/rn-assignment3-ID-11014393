@@ -1,7 +1,6 @@
 // CategoriesItems.js
 import React from 'react';
 import { StyleSheet, View, Text, Image, ScrollView } from 'react-native';
-import Swipeable from 'react-native-gesture-handler/Swipeable';
 
 const categories = [
   {
@@ -55,27 +54,19 @@ const categories = [
 ];
 
 const CategoriesItems = () => {
-  const renderRightActions = () => (
-    <View style={styles.rightAction}>
-      <Text style={styles.actionText}>Delete</Text>
-    </View>
-  );
-
   return (
     <ScrollView horizontal style={styles.scrollContainer}>
       {categories.map((category) => (
-        <Swipeable key={category.id} renderRightActions={renderRightActions}>
-          <View style={styles.categoriesCard}>
-            <View style={styles.rectangle} />
-            <View style={styles.text}>
-              <Text style={styles.upperText}>{category.upperText}</Text>
-              <Text style={styles.lowerText}>{category.lowerText}</Text>
-            </View>
-            <View style={styles.imageContainer}>
-              <Image source={category.image} style={styles.image} />
-            </View>
+        <View key={category.id} style={styles.categoriesCard}>
+          <View style={styles.rectangle} />
+          <View style={styles.text}>
+            <Text style={styles.upperText}>{category.upperText}</Text>
+            <Text style={styles.lowerText}>{category.lowerText}</Text>
           </View>
-        </Swipeable>
+          <View style={styles.imageContainer}>
+            <Image source={category.image} style={styles.image} />
+          </View>
+        </View>
       ))}
     </ScrollView>
   );
@@ -83,6 +74,7 @@ const CategoriesItems = () => {
 
 const styles = StyleSheet.create({
   scrollContainer: {
+    top: 60,
     flexDirection: 'row',
     paddingHorizontal: 20,
     marginTop: 20,
@@ -130,18 +122,6 @@ const styles = StyleSheet.create({
   image: {
     width: '100%',
     height: '100%',
-  },
-  rightAction: {
-    backgroundColor: 'red',
-    justifyContent: 'center',
-    alignItems: 'flex-end',
-    padding: 20,
-    borderRadius: 15,
-    marginBottom: 20,
-  },
-  actionText: {
-    color: '#fff',
-    fontWeight: '600',
   },
 });
 

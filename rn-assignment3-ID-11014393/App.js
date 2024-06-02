@@ -6,6 +6,7 @@ import Nav from './Nav';
 import SearchArea from './SearchArea';
 import Categories from './Categories';
 import CategoriesItems from './CategoriesItems';
+import Ongoing from './Ongoing';
 
 export default function App() {
   return (
@@ -14,7 +15,8 @@ export default function App() {
         <Nav />
         <SearchArea />
         <Categories />
-        <CategoriesItems /> {/* Added CategoriesItems component */}
+        <CategoriesItems />
+        <Ongoing />
       </View>
       <StatusBar style="auto" />
     </SafeAreaView>
